@@ -1,233 +1,167 @@
 import Image from "next/image";
 import React from "react";
+import timer from "/public/timer.svg";
 
 import Link from "next/link";
 
 const Pricing = () => {
   return (
-    <div id="Pricing" className="bg-primary pt-8 lg:pt-16">
-      <div className="container max-w-[1280px] mx-auto pb-14 lg:pb-20">
-        <h1 className="text-center text-white font-bold text-[30px] lg:text-[40px] leading-[49px] tracking-[0.8px] uppercase pb-6 lg:pb-16">
-          Pricing
+    <div className="mt-16">
+      <div className="container max-w-[1280px] mx-auto">
+        <h1 className="text-[#A9610A] underline underline-offset-4 font-bold text-[30px] lg:text-[40px] leading-[49px] tracking-[0.8px] pb-6">
+          Bizning tariflarimiz
         </h1>
-        <div className="hidden lg:flex flex-col items-center lg:flex-row lg:justify-between">
-          <div className="w-[350px] lg:w-[400px] h-[700px] flex flex-col justify-between bg-[#EDEDED] p-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
-            <div>
-              <h2 className="text-primary text-2xl font-semibold tracking-[0.8px] pb-6">
-                Free
+        <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between">
+          <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+            <div className="text-center">
+              <h2 className="text-primary text-[#DFAF24] text-2xl font-semibold tracking-[0.8px] pb-6">
+                Standart ta’rifi
               </h2>
-              <h3 className="flex pb-10 text-3xl text-[rgba(0,47,95,0.3)] font-medium">
-                $ <p className="text-primary font-medium">0</p> / Year
+              <h3 className="text-[#A9610A] pb-6 text-3xl font-medium">
+                Narxi: 3 800 $
               </h3>
-              <div className="flex flex-col">
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Course management</p>
-                </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Define roles and permissions</p>
-                </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Entrance attendance tracking</p>
-                </div>
-                <div className="flex pb-6 items-center">
-                  <p className="pl-[10px] text-[14px] leading-[130%] -tracking-tighter">
-                    Creating notifications and announcements
+              <div className="flex flex-col divide-y">
+                <div className="">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Bepul o‘qish
                   </p>
                 </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Branch management</p>
+                <div className="">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Bepul yotoqxona
+                  </p>
                 </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Mobile application</p>
+                <div className="">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    6 oy ingliz va xitoy tilini o‘rganish (offline+online)
+                  </p>
+                </div>
+                <div className="items-center">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Talabalik davrida ish bilan ta’minlash
+                  </p>
                 </div>
               </div>
             </div>
-            <Link href="#Contacts">
-              <button className="group w-[190px] hover:bg-[#0F6AC7] py-3 px-4 mx-auto flex items-center rounded-lg bg-primary">
-                <span className="text-white text-base leading-5 tracking-[0.8px]">
-                  Start trial
-                </span>
-                <div className="flex pl-4">
-                  <div className="group-hover:translate-x-6 duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="16"
-                      viewBox="0 0 10 16"
-                      fill="none"
-                    >
-                      <path
-                        className="group-hover:fill-[#0F6AC7]"
-                        d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                        fill="#002F5F"
-                        stroke="white"
-                      />
-                      <path
-                        d="M6.94995 5.2002L9.74995 8.0002L6.94995 10.8002"
-                        stroke="white"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  {/* <Image
-                    
-                    src={buttonIcon}
-                    width={26}
-                    height={14}
-                    alt="tick icon"
-                  /> */}
-                </div>
-              </button>
-            </Link>
           </div>
-          <div className="w-[350px] lg:w-[400px] h-[700px] flex flex-col justify-between bg-[#EDEDED] p-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
-            <div>
-              <h2 className="text-primary text-2xl font-semibold tracking-[0.8px] pb-6">
-                Basic
-              </h2>
-              <h3 className="flex pb-10 text-3xl text-[rgba(0,47,95,0.3)] font-medium">
-                $ <p className="text-primary font-medium">9</p> / Year
-              </h3>
-              <div className="flex flex-col">
-                <div className="flex pb-[26px]">
-                  <p className="pl-[10px]">Features of Free version</p>
-                </div>
-                <div className="flex pb-[26px]">
-                  <p className="pl-[10px]">External apps integration</p>
-                </div>
-                <div className="flex pb-[26px]">
-                  <p className="pl-[10px]">Request management</p>
-                </div>
-                <div className="flex pb-[26px] items-center">
-                  <p className="pl-[10px] text-[14px] leading-[130%] -tracking-tighter">
-                    Email Communication
+          <div>
+            <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+              <div className="absolute w-[350px] lg:w-[400px]">
+                <div className="relative left-[280px]">
+                  <p className="absolute z-10 -top-6 left-8 font-sans font-semibold text-white text-base">
+                    12:12:12
                   </p>
+                  <Image className="relative -top-6" src={timer} alt="timer" />
                 </div>
-                <div className="flex pb-[26px]">
-                  <p className="pl-[10px]">Video conferencing</p>
-                </div>
-                <div className="flex pb-[26px]">
-                  <p className="pl-[10px]">Statistics and reporting</p>
+              </div>
+              <div className="text-center py-8">
+                <h2 className="text-primary text-[#242424] text-2xl font-semibold tracking-[0.8px] pb-6">
+                  Optimal ta’rifi
+                </h2>
+                <h3 className="text-[#A9610A] pb-6 text-3xl font-medium">
+                  Narxi: 3 800 $
+                </h3>
+                <div className="flex flex-col divide-y divide-[#F0F0F0]">
+                  <div className="">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      Bepul o‘qish
+                    </p>
+                  </div>
+                  <div className="">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      Bepul yotoqxona
+                    </p>
+                  </div>
+                  <div className="">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      6 oy ingliz va xitoy tilini o‘rganish (offline+online)
+                    </p>
+                  </div>
+                  <div className="items-center">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      Talabalik davrida ish bilan ta’minlash
+                    </p>
+                  </div>
+                  <div className="items-center">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      Savdo agentlik kursi (talabalikni o’zida tadbirkorlikni
+                      boshlashni istaganlar uchun)
+                    </p>
+                  </div>
+                  <div className="items-center">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      Sug’urta
+                    </p>
+                  </div>
+                  <div className="items-center">
+                    <p className="py-2 pl-[10px] font-normal text-xl">
+                      Tibbiy tekshiruv
+                    </p>
+                  </div>
+                  <div className="items-center">
+                    <p className="pt-2 pl-[10px] font-normal text-xl">
+                      Visa xarajatlari
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <Link href="#Contacts">
-              <button className="group w-[190px] hover:bg-[#0F6AC7] py-3 px-4 mx-auto flex items-center rounded-lg bg-primary">
-                <span className="text-white text-base leading-5 tracking-[0.8px]">
-                  Start trial
-                </span>
-                <div className="flex pl-4">
-                  <div className="group-hover:translate-x-6 duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="16"
-                      viewBox="0 0 10 16"
-                      fill="none"
-                    >
-                      <path
-                        className="group-hover:fill-[#0F6AC7]"
-                        d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                        fill="#002F5F"
-                        stroke="white"
-                      />
-                      <path
-                        d="M6.94995 5.2002L9.74995 8.0002L6.94995 10.8002"
-                        stroke="white"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  {/* <Image
-                    
-                    src={buttonIcon}
-                    width={26}
-                    height={14}
-                    alt="tick icon"
-                  /> */}
-                </div>
-              </button>
-            </Link>
           </div>
-          <div className="w-[350px] lg:w-[400px] h-[700px] flex flex-col justify-between bg-[#EDEDED] p-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
-            <div>
-              <h2 className="text-primary flex text-2xl font-semibold tracking-[0.8px] pb-6">
-                Premium
+          <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+            <div className="text-center">
+              <h2 className="text-primary text-[#DFAF24] text-2xl font-semibold tracking-[0.8px] pb-6">
+                Premium ta’rifi
               </h2>
-              <h3 className="flex pb-10 text-3xl text-[rgba(0,47,95,0.3)] font-medium">
-                $ <p className="text-primary font-medium">14</p> / Year
+              <h3 className="text-[#A9610A] pb-6 text-3xl font-medium">
+                Narxi: 8 800 $
               </h3>
-              <div className="flex flex-col">
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Features of Basic version</p>
-                </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Self-customization</p>
-                </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Gamification</p>
-                </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Statistics with AI implementation</p>
-                </div>
-                <div className="flex pb-6 items-center">
-                  <p className="pl-[10px] text-[14px] leading-[130%] -tracking-tighter">
-                    Advanced attendance tracking
+              <div className="flex flex-col divide-y">
+                <div className="">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Bepul o‘qish
                   </p>
                 </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">
-                    Security through two-way verification
+                <div className="">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Bepul yotoqxona
                   </p>
                 </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Human Resource Management</p>
+                <div className="">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    6 oy ingliz va xitoy tilini o‘rganish (offline+online)
+                  </p>
                 </div>
-                <div className="flex pb-6">
-                  <p className="pl-[10px]">Accounting system</p>
+                <div className="items-center">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Talabalik davrida ish bilan ta’minlash
+                  </p>
+                </div>
+                <div className="items-center">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Savdo agentlik kursi (talabalikni o’zida tadbirkorlikni
+                    boshlashni istaganlar uchun)
+                  </p>
+                </div>
+                <div className="items-center">
+                  <p className="py-2 pl-[10px] font-normal text-xl">Sug’urta</p>
+                </div>
+                <div className="items-center">
+                  <p className="py-2 pl-[10px] font-normal text-xl">
+                    Tibbiy tekshiruv
+                  </p>
+                </div>
+                <div className="items-center">
+                  <p className="pt-2 pl-[10px] font-normal text-xl">
+                    Visa xarajatlari
+                  </p>
+                </div>
+                <div className="items-center">
+                  <p className="pt-2 pl-[10px] font-normal text-xl">
+                    O’qishni yakunlagandan so’ng ish bilan ta’minlash kafolati
+                  </p>
                 </div>
               </div>
             </div>
-            <Link href="#Contacts">
-              <button className="group w-[190px] hover:bg-[#0F6AC7] py-3 px-4 mx-auto flex items-center rounded-lg bg-primary">
-                <span className="text-white text-base leading-5 tracking-[0.8px]">
-                  Start trial
-                </span>
-                <div className="flex pl-4">
-                  <div className="group-hover:translate-x-6 duration-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="16"
-                      viewBox="0 0 10 16"
-                      fill="none"
-                    >
-                      <path
-                        className="group-hover:fill-[#0F6AC7]"
-                        d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15Z"
-                        fill="#002F5F"
-                        stroke="white"
-                      />
-                      <path
-                        d="M6.94995 5.2002L9.74995 8.0002L6.94995 10.8002"
-                        stroke="white"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  {/* <Image
-                    
-                    src={buttonIcon}
-                    width={26}
-                    height={14}
-                    alt="tick icon"
-                  /> */}
-                </div>
-              </button>
-            </Link>
           </div>
         </div>
       </div>

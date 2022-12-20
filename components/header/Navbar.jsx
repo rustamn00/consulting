@@ -18,29 +18,45 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      <nav className="lg:block hidden bg-white h-[80px] py-4 fixed top-0 right-0 left-0 z-20">
-        <div className="container mx-auto flex items-center">
-          <div className="w-1/5 flex justify-center items-center">
+    <div className="h-[100vh] bg-headerBack bg-cover bg-no-repeat">
+      <nav className="lg:block hidden h-[80px] py-4">
+        <div className="container max-w-[1280px] mx-auto flex justify-between">
+          <div className="flex mt-7">
             <Link
               href="/"
               className="flex cursor-pointer justify-center items-center"
             >
               <Image src={logotip} alt="logo" />
-              <div>
-                <h2 className="font-semibold text-xl text-orange">LACHIN</h2>
-                <h4 className="font-semibold text-xl text-orange">
+              <div className="ml-5">
+                <h2 className="font-normal text-white font-serif text-5xl text-orange">
+                  LACHIN
+                </h2>
+                <h4 className="font-normal text-white font-sans text-xl text-orange">
                   Consulting
                 </h4>
               </div>
             </Link>
           </div>
-          <div className="w-3/5 flex justify-around items-center"></div>
-          <div className="w-1/5 flex justify-center items-center">
+
+          <div className="mt-5">
             <Button />
           </div>
         </div>
+
+        <div className="container max-w-[1280px] mx-auto">
+          <div className="mt-40 w-[600px]">
+            <p className="w-[510px] text-white font-sans leading-[48px] font-[550] text-[46px]">
+              Talabalik davridan boshlab 1000$ oylik olib, ishlashni boshlang
+            </p>
+            <p className="mt-6 text-white font-sans leading-[32px] font-normal text-[20px]">
+              O‘zbekistondan chiqmay turib, imtihon orqali TOP-1000 talikdan joy
+              olgan, Xitoyning nufuzli Universitetlariga 100% grandga kirish
+              imkoniyati
+            </p>
+          </div>
+        </div>
       </nav>
+
       {/* Mobile navbar  */}
       <nav className="lg:hidden bg-white py-4 fixed top-0 right-0 left-0 z-20">
         <div className="container mx-auto justify-between flex items-center">
@@ -87,7 +103,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
@@ -95,14 +111,10 @@ export default Navbar;
 
 export const Button = () => {
   return (
-    <Link
-      href="#Contacts"
-      type="button"
-      className="bg-orange border border-solid border-orange text-sm px-4 py-2 rounded-md flex justify-center items-center hover:bg-hoverOrange transition-all duration-200"
-    >
-      <span className="text-black mx-2 font-medium text-sm">
-        Get 30-day Free Trial
+    <a href="#Contacts" type="button" className="">
+      <span className="text-white underline underline-offset-[12px] font-sans text-3xl font-semibold">
+        Bog’lanish
       </span>
-    </Link>
+    </a>
   );
 };

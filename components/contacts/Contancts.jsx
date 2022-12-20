@@ -67,45 +67,37 @@ const Contancts = () => {
   return (
     <>
       <div id="Contacts" className="mt-5">
-        <div className="container mx-auto min-h-[90vh]">
-          <h1 className="lg:text-4xl text-2xl text-primary mt-5 font-semibold text-center">
-            GET IN TOUCH
-          </h1>
-          <div className="lg:w-[80%] w-full mx-auto shadow-lg rounded-[10px] mt-5 lg:flex lg:p-5 p-3 ">
-            <div className="sm:h-[70vh] h-[50vh] bg-[#002F5F] lg:w-1/2  w-full rounded-lg relative">
-              <div className="text-white lg:p-10 py-5 px-6">
-                <h1 className="lg:text-3xl text-xl">Contact information</h1>
-                <div className="mt-5 lg:w-[550px] w-full">
-                  <p className="font-thin lg:text-lg lg:w-[80%] w-full text-base text-text">
-                    We will help you enhance quality of education by
-                    digitalizing educational process in your institution
-                  </p>
-                </div>
-                <div className="lg:mt-20  mt-10">
-                  {contacts.map((item) => {
-                    return (
-                      <div className="flex items-center mt-10 " key={item.id}>
-                        {item?.svg}
-                        <p key={item.id} className="ml-5 text-lg">
-                          {item.text}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <Image
-                width={200}
-                height={200}
-                src="/assets/contactInformation.png"
-                className="absolute right-0 bottom-0"
-                alt="round"
+        <div className="container mx-auto max-w-[1280px]">
+          <div className="flex flex-wrap px-10 py-4 justify-start overflow-hidden bg-[#DFAF24] text-white ">
+            <label
+              className="font-white text-4xl grow px-4 py-3 font-medium"
+              htmlFor="collapse"
+            >
+              Imkoniyatdan foydalanish
+            </label>
+            <input
+              className="peer mx-4 my-3 h-0 w-0 appearance-none rounded border text-slate-800 accent-slate-600 opacity-0"
+              type="checkbox"
+              name="collapse"
+              defaultChecked
+              id="collapse"
+            />
+            {/* <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 36 36"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="my-3 w-9 transition-all duration-200 peer-checked:rotate-45"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"
               />
-            </div>
-            <div className="lg:w-1/2 w-full lg:px-10 px-3 pt-2">
-              {/* <div className="border px-2"> */}
+            </svg> */}
+            <div className="-transparent absolute -translate-y-full scale-75 scale-y-0 px-4 py-3 opacity-0 transition-all duration-200 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100 peer-checked:opacity-100">
               <FormInput />
-              {/* </div> */}
             </div>
           </div>
         </div>
