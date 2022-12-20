@@ -1,8 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import timer from "/public/timer.svg";
-
+import Countdown from "react-countdown";
 import Link from "next/link";
+const Completionist = () => <span>Missed</span>;
 
 const Pricing = () => {
   return (
@@ -48,18 +49,27 @@ const Pricing = () => {
             <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
               <div className="absolute w-[350px] lg:w-[400px]">
                 <div className="relative left-[280px]">
-                  <p className="absolute z-10 -top-6 left-8 font-sans font-semibold text-white text-base">
-                    12:12:12
+                  <p className="absolute z-10 -top-6 left-[18px] font-sans font-semibold text-white text-base">
+                    <Countdown
+                      date={new Date("Dec 23, 2022 23:59:59").getTime()}
+                    >
+                      <Completionist />
+                    </Countdown>
                   </p>
                   <Image className="relative -top-6" src={timer} alt="timer" />
                 </div>
               </div>
               <div className="text-center py-8">
                 <h2 className="text-primary text-[#242424] text-2xl font-semibold tracking-[0.8px] pb-6">
-                  Optimal ta’rifi
+                  Optimal ta’rifi <br />
+                  (23-dekabrgacha chegirma)
                 </h2>
                 <h3 className="text-[#A9610A] pb-6 text-3xl font-medium">
-                  Narxi: 3 800 $
+                  Narxi:{" "}
+                  <span className="line-through text-red-600 decoration-2">
+                    5 800 $
+                  </span>{" "}
+                  3 800 $
                 </h3>
                 <div className="flex flex-col divide-y divide-[#F0F0F0]">
                   <div className="">

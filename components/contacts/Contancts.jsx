@@ -79,7 +79,7 @@ const Contancts = () => {
               className="peer mx-4 my-3 h-0 w-0 appearance-none rounded border text-slate-800 accent-slate-600 opacity-0"
               type="checkbox"
               name="collapse"
-              defaultChecked
+              defaultChecked={true}
               id="collapse"
             />
             {/* <svg

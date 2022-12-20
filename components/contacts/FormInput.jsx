@@ -78,9 +78,11 @@ const FormInput = () => {
       .post(
         `${process.env.NEXT_PUBLIC_API_URL} Full name:${values?.first_name} %0APhone number: ${values?.number} %0AMessage: ${values?.text_area}`
       )
-      .then(function (response) {})
+      .then(function (response) {
+        alert("Surovingiz yuborildi");
+      })
       .catch(function (error) {
-        toast.error("Internal error");
+        console.log("Internal error");
       });
     values.name = "";
     resetForm({ values: "" });
