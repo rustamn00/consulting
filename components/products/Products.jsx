@@ -79,7 +79,7 @@ const Products = () => {
           <br />
           Fanlar: Umumiy 30 test bo‘lib, boshlang‘ich matematika, psixologik
           savollardan iborat bo‘ladi <br /> Manzil: Medion academy <br /> Sana:
-          25 dekabr, soat 10:00 da <br /> Imtixon mehmoni: Saadulla Abdullaev
+          25 dekabr, soat 10:00 da <br /> Imtihon mehmoni: Saadulla Abdullaev
           (Texnoplov)
         </p>
 
@@ -98,8 +98,8 @@ const Products = () => {
         </p>
 
         <p className="mt-6 lg:w-auto w-[373px] font-sans text-xl text-[#666666] font-medium">
-          Ro‘yxatdan o‘tish va yanada batafsil ma’lumot olish uchun
-          “Imkoniyatdan foydalanaman” tugmasi ustiga bosing.
+          Ro‘yxatdan o‘tish va yanada batafsil ma’lumot olish uchun “Biz bilan
+          bog‘lanish” tugmasi ustiga bosing.
         </p>
       </div>
     </div>
