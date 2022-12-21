@@ -6,10 +6,10 @@ import FormInput from "./FormInput";
 const Contancts = () => {
   function initMap() {
     // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
+    const uluru = { lat: 41.326644, lng: 69.249385 };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
+      zoom: 15,
       center: uluru,
     });
     // The marker, positioned at Uluru
@@ -61,7 +61,12 @@ const Contancts = () => {
             <div className="-transparent absolute -translate-y-full scale-75 scale-y-0 px-4 py-3 opacity-0 transition-all duration-200 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100 peer-checked:opacity-100">
               <FormInput />
             </div>
-            {/* <div className="w-[100vw] h-[400px] z-20" id="map"></div> */}
+          </div>
+          <div className="container mx-auto max-w-[375px] lg:max-w-[1280px] mt-10">
+            <h3 className="text-3xl text-[#A9610A] font-semibold font-sans mb-10">
+              Imtihon o’tkaziladigan manzil
+            </h3>
+            <div className="rounded-sm h-[400px]" id="map"></div>
           </div>
         </div>
       </div>

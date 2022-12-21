@@ -4,10 +4,10 @@ import Script from "next/script";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* <Script
-        src="https://maps.googleapis.com/maps/api/js?key=INSERT_YOUR_API_KEY&callback=initMap&v=weekly"
+      <Script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuVfzUhtnZ8nEHPoT1WR7ADAdizlVHKOU&callback=initMap&v=weekly"
         defer
-      ></Script> */}
+      ></Script>
 
       <Script
         async
