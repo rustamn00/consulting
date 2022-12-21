@@ -5,6 +5,20 @@ import Countdown from "react-countdown";
 import Link from "next/link";
 
 const Pricing = () => {
+  const renderer = ({ hours, minutes, days, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <Completionist />;
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {days > 9 ? days : "0" + days}:{hours > 9 ? hours : "0" + hours}:
+          {minutes > 9 ? minutes : "0" + minutes}
+        </span>
+      );
+    }
+  };
   const Completionist = () => <span>Missed</span>;
   return (
     <div className="lg:mt-16 mt-6">
@@ -49,12 +63,11 @@ const Pricing = () => {
             <div className="w-[343px] lg:w-[400px] flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-sm shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
               <div className="absolute w-[350px] lg:w-[400px]">
                 <div className="relative lg:left-[300px] left-[230px]">
-                  <div className="absolute z-10 -top-6 left-[18px] font-sans font-semibold text-white text-base">
+                  <div className="absolute z-10 -top-4 left-[30px] font-sans font-semibold text-white text-base">
                     <Countdown
                       date={new Date("Dec 23, 2022 23:59:59").getTime()}
-                    >
-                      <Completionist />
-                    </Countdown>
+                      renderer={renderer}
+                    ></Countdown>
                   </div>
                   <Image className="relative -top-6" src={timer} alt="timer" />
                 </div>
