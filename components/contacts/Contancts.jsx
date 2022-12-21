@@ -63,7 +63,7 @@ const Contancts = () => {
             </div>
           </div>
           <div className="container mx-auto max-w-[375px] lg:max-w-[1280px] mt-10">
-            <h3 className="text-3xl text-[#A9610A] font-semibold font-sans mb-10">
+            <h3 className="text-2xl lg:text-3xl text-[#A9610A] font-semibold font-sans mb-4 lg:mb-10">
               Imtihon o’tkaziladigan manzil
             </h3>
             <div className="rounded-sm h-[400px]" id="map"></div>
