@@ -6,7 +6,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <div className="h-[100vh] bg-headerMobiBack lg:bg-headerBack bg-cover bg-no-repeat">
-      <nav className="lg:h-[80px] py-4">
+      <nav className="lg:py-0 py-4">
         <div className="container max-w-[375px] px-5 lg:px-0 lg:max-w-[1280px] mx-auto flex justify-between">
           <div className="flex mt-7">
             <Link

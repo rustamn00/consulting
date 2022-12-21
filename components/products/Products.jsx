@@ -7,7 +7,7 @@ const Products = () => {
         <h2 className="text-[30px] lg:text-[32px] mx-4 lg:mx-0 text-[#A9610A] text-primary font-bold lg:border-none border-b-2 border-[#A9610A] border-solid lg:font-semibold">
           Biz orqali Xitoyga ketsangiz qancha pulni tejab qolasiz?
         </h2>
-        <div className="mt-10 lg:h-[75vh] bg-no-repeat bg-cover bg-aboutMobiBack lg:bg-aboutBack">
+        <div className="mt-10 lg:h-[524px] bg-no-repeat bg-cover bg-aboutMobiBack lg:bg-aboutBack">
           <div className="flex">
             <div className="hidden bg-[#A9610A] lg:block relative lg:left-[80px] rounded-sm p-5 top-[260px] lg:top-[360px] font-sans font-normal text-xl text-white lg:w-[750px] w-[347px] mx-auto lg:mx-0">
               <p>1. Yotoqxona xarajatlari – 1000$ dan 4 yil-4000$</p>

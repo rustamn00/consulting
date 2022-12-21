@@ -13,7 +13,7 @@ const Pricing = () => {
           Bizning ta’riflarimiz
         </h1>
         <div className="flex flex-col lg:flex-row lg:justify-between px-4 lg:px-0">
-          <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+          <div className="w-[343px] lg:w-[400px] flex flex-col justify-between bg-white border border-[#DFAF24] py-8 my-4 lg:my-0 rounded-sm shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
             <div className="text-center">
               <h2 className="text-primary text-[#DFAF24] text-2xl font-semibold tracking-[0.8px] pb-6">
                 Standart ta’rifi
@@ -46,9 +46,9 @@ const Pricing = () => {
             </div>
           </div>
           <div>
-            <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+            <div className="w-[343px] lg:w-[400px] flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-sm shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
               <div className="absolute w-[350px] lg:w-[400px]">
-                <div className="relative lg:left-[280px] left-[230px]">
+                <div className="relative lg:left-[300px] left-[230px]">
                   <div className="absolute z-10 -top-6 left-[18px] font-sans font-semibold text-white text-base">
                     <Countdown
                       date={new Date("Dec 23, 2022 23:59:59").getTime()}
@@ -120,7 +120,7 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-          <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+          <div className="w-[343px] lg:w-[400px] flex flex-col justify-between bg-white border border-[#DFAF24] py-8 my-4 lg:my-0 rounded-sm shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
             <div className="text-center">
               <h2 className="text-primary text-[#DFAF24] text-2xl font-semibold tracking-[0.8px] pb-6">
                 Premium ta’rifi
@@ -187,7 +187,7 @@ export default Pricing;
 export const Button = () => {
   return (
     <a href="#Contacts" type="button" className="">
-      <span className="text-white bg-[#A9610A] px-7 py-4 underline underline-offset-2 font-sans text-xl lg:text-xl font-semibold">
+      <span className="text-white w-[291px] h-[60px] rounded-sm bg-[#A9610A] px-7 py-4 underline underline-offset-2 font-sans text-xl lg:text-xl font-semibold">
         Imkoniyatdan foydalanish
       </span>
     </a>

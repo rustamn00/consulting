@@ -103,7 +103,7 @@ const FormInput = () => {
           formik.handleSubmit(e);
           // formik.values = initialValues;
         }}
-        className="modal-form"
+        className=""
       >
         <div className="flex bg-[#DFAF24]">
           <div className="flex flex-col">
