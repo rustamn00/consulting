@@ -64,11 +64,14 @@ const Products = () => {
         </p>
 
         <p className="mt-10 lg:w-auto w-[373px] font-sans text-xl text-[#666666] font-medium">
-          <strong className="text-black">“Pul to‘lasam bas”</strong> Yo‘q!
-          Pulingiz bor degani omadlilar qatorida bo’lasiz degani emas. Siz ushbu
-          imkoniyatdan foydalanish uchun 25-dekabrda bo‘lib o‘tadigan imtihon
-          orqali 76 ball dan ortiq ball to‘plashingiz kerak. So‘ngra o‘zingiz
-          tanlagan ta‘rif va yo‘nalish bo‘yicha o‘qishga qabul qilinasiz.
+          <strong className="text-black line-through decoration-1">
+            “Pul to‘lasam bas”
+          </strong>{" "}
+          Yo‘q! Pulingiz bor degani omadlilar qatorida bo’lasiz degani emas. Siz
+          ushbu imkoniyatdan foydalanish uchun 25-dekabrda bo‘lib o‘tadigan
+          imtihon orqali 76 ball dan ortiq ball to‘plashingiz kerak. So‘ngra
+          o‘zingiz tanlagan ta‘rif va yo‘nalish bo‘yicha o‘qishga qabul
+          qilinasiz.
         </p>
 
         <p className="mt-10 lg:w-auto w-[373px] font-sans text-xl text-[#666666] font-medium">

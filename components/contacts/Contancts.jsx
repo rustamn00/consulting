@@ -73,7 +73,7 @@ const Contancts = () => {
               className="font-white text-xl lg:text-4xl grow px-4 py-3 font-medium"
               htmlFor="collapse"
             >
-              Imkoniyatdan foydalanish
+              Biz bilan bog’lanish
             </label>
             <input
               className="peer mx-4 my-3 h-0 w-0 appearance-none rounded border text-slate-800 accent-slate-600 opacity-0"

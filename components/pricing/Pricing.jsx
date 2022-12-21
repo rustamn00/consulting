@@ -7,10 +7,10 @@ import Link from "next/link";
 const Pricing = () => {
   const Completionist = () => <span>Missed</span>;
   return (
-    <div className="lg:mt-16">
+    <div className="lg:mt-16 mt-6">
       <div className="container max-w-[375px] lg:max-w-[1280px] mx-auto">
         <h1 className="text-[#A9610A] px-4 lg:px-0 underline underline-offset-4 font-bold text-[30px] lg:text-[40px] leading-[49px] tracking-[0.8px] pb-0 lg:pb-6">
-          Bizning tariflarimiz
+          Bizning ta’riflarimiz
         </h1>
         <div className="flex flex-col lg:flex-row lg:justify-between px-4 lg:px-0">
           <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
@@ -114,6 +114,9 @@ const Pricing = () => {
                     </p>
                   </div>
                 </div>
+                <div className="pt-6 items-center">
+                  <Button />
+                </div>
               </div>
             </div>
           </div>
@@ -180,3 +183,13 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
+export const Button = () => {
+  return (
+    <a href="#Contacts" type="button" className="">
+      <span className="text-white bg-[#A9610A] px-7 py-4 underline underline-offset-2 font-sans text-xl lg:text-xl font-semibold">
+        Imkoniyatdan foydalanish
+      </span>
+    </a>
+  );
+};

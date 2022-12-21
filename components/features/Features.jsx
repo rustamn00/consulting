@@ -9,10 +9,10 @@ const Features = () => {
           Quyidagi video rolik orqali siz batafsil ma’lumot olishingingiz
           mumkin.
         </h2>
-        <div className="h-[350px] lg:h-[500px] mx-4 lg:mx-0 lg:px-0 max-w-[343px] lg:max-w-[1280px] rounded-sm bg-slate-400">
+        <div className="justify-center flex h-[350px] lg:h-[500px] mx-4 lg:mx-0 lg:px-0 max-w-[343px] lg:max-w-[1280px] rounded-sm">
           <iframe
             className="hidden mt-4 lg:block"
-            width="1280"
+            width="885"
             height="500"
             src="https://www.youtube.com/embed/6o4xaxSrrLY"
             title="YouTube video player"
