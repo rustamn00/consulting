@@ -5,22 +5,26 @@ import logotip from "/public/logotip.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-footerBack bg-cover bg-no-repeat h-[210px] mt-14">
-      <div className="container mx-auto max-w-[1280px]">
+    <footer className="bg-footerMobiBack lg:bg-footerBack bg-cover bg-no-repeat h-[210px] mt-14">
+      <div className="container mx-4 lg:mx-auto max-w-[375px] lg:max-w-[1280px]">
         <div className="flex justify-between ">
           <div className="flex mt-7">
-            <Image src={logotip} alt="logo" />
-            <div className="ml-5">
-              <h2 className="font-normal text-white font-serif text-5xl text-orange">
+            <Image
+              className="w-[64px] h-[56px] lg:w-auto lg:h-auto"
+              src={logotip}
+              alt="logo"
+            />
+            <div className="lg:ml-5 ml-2">
+              <h2 className="font-normal text-white font-serif text-2xl lg:text-5xl text-orange">
                 LACHIN
               </h2>
-              <h4 className="font-normal text-white font-sans text-xl text-orange">
+              <h4 className="font-normal text-white font-sans text-sm lg:text-xl text-orange">
                 Consulting
               </h4>
             </div>
           </div>
 
-          <div className="lg:w-[15%] w-full flex justify-around items-center lg:my-0 my-4">
+          <div className="lg:w-[15%] flex justify-around items-center lg:my-0 my-4">
             <a
               target="_blank"
               href="https://t.me/lachinconsulting"

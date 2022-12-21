@@ -107,7 +107,7 @@ const FormInput = () => {
       >
         <div className="flex bg-[#DFAF24]">
           <div className="flex flex-col">
-            <label className="text-base w-[540px] relative flex flex-col">
+            <label className="text-base w-[343px] lg:w-[540px] relative flex flex-col">
               <input
                 type="text"
                 name="first_name"
@@ -129,7 +129,7 @@ const FormInput = () => {
               ) : null}
             </label>
 
-            <label className="relative flex flex-col mt-4">
+            <div className="relative w-[343px] lg:w-[540px] flex flex-col mt-4">
               <div
                 className={
                   formik.touched.number && formik.errors.number
@@ -151,23 +151,34 @@ const FormInput = () => {
                   </span>
                 ) : null}
               </div>
+            </div>
+
+            <label className="block lg:hidden text-base w-[343px] lg:w-[594px] mt-4 relative">
+              <textarea
+                type="text"
+                name="text_area"
+                id="text_area"
+                placeholder="Qo’shimcha fikr - mulohazalaringiz"
+                className="h-[194px] w-[343px] text-black border col-2 outline-none rounded-md py-2 px-4"
+                {...formik.getFieldProps("text_area")}
+              />
             </label>
 
             <button
-              className="w-[540px] bg-white h-12 text-lg font-sans font-semibold rounded-sm text-[#CF9102] mt-6"
+              className="w-[343px] lg:w-[540px] bg-white h-12 text-lg font-sans font-semibold rounded-sm text-[#CF9102] mt-6"
               type="submit"
             >
               Yuborish
             </button>
           </div>
 
-          <label className="text-base w-[594px] relative flex flex-col">
+          <label className="hidden lg:block text-base relative">
             <textarea
               type="text"
               name="text_area"
               id="text_area"
               placeholder="Qo’shimcha fikr - mulohazalaringiz"
-              className="h-[194px] text-black border col-2 ml-10 outline-none rounded-md py-2 px-4"
+              className="h-[194px] w-[594px] text-black border col-2 ml-10 outline-none rounded-md py-2 px-4"
               {...formik.getFieldProps("text_area")}
             />
           </label>

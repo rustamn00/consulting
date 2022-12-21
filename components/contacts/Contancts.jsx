@@ -67,10 +67,10 @@ const Contancts = () => {
   return (
     <>
       <div id="Contacts" className="mt-5">
-        <div className="container mx-auto max-w-[1280px]">
-          <div className="flex flex-wrap px-10 py-4 justify-start overflow-hidden bg-[#DFAF24] text-white ">
+        <div className="container mx-auto max-w-[375px] lg:max-w-[1280px]">
+          <div className="flex flex-wrap lg:px-10 py-4 justify-start overflow-hidden bg-[#DFAF24] text-white ">
             <label
-              className="font-white text-4xl grow px-4 py-3 font-medium"
+              className="font-white text-xl lg:text-4xl grow px-4 py-3 font-medium"
               htmlFor="collapse"
             >
               Imkoniyatdan foydalanish

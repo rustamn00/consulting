@@ -3,17 +3,17 @@ import React, { useEffect } from "react";
 import timer from "/public/timer.svg";
 import Countdown from "react-countdown";
 import Link from "next/link";
-const Completionist = () => <span>Missed</span>;
 
 const Pricing = () => {
+  const Completionist = () => <span>Missed</span>;
   return (
-    <div className="mt-16">
-      <div className="container max-w-[1280px] mx-auto">
-        <h1 className="text-[#A9610A] underline underline-offset-4 font-bold text-[30px] lg:text-[40px] leading-[49px] tracking-[0.8px] pb-6">
+    <div className="lg:mt-16">
+      <div className="container max-w-[375px] lg:max-w-[1280px] mx-auto">
+        <h1 className="text-[#A9610A] px-4 lg:px-0 underline underline-offset-4 font-bold text-[30px] lg:text-[40px] leading-[49px] tracking-[0.8px] pb-0 lg:pb-6">
           Bizning tariflarimiz
         </h1>
-        <div className="hidden lg:flex flex-col lg:flex-row lg:justify-between">
-          <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+        <div className="flex flex-col lg:flex-row lg:justify-between px-4 lg:px-0">
+          <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
             <div className="text-center">
               <h2 className="text-primary text-[#DFAF24] text-2xl font-semibold tracking-[0.8px] pb-6">
                 Standart ta’rifi
@@ -46,16 +46,16 @@ const Pricing = () => {
             </div>
           </div>
           <div>
-            <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+            <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#FCE663]  my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
               <div className="absolute w-[350px] lg:w-[400px]">
-                <div className="relative left-[280px]">
-                  <p className="absolute z-10 -top-6 left-[18px] font-sans font-semibold text-white text-base">
+                <div className="relative lg:left-[280px] left-[230px]">
+                  <div className="absolute z-10 -top-6 left-[18px] font-sans font-semibold text-white text-base">
                     <Countdown
                       date={new Date("Dec 23, 2022 23:59:59").getTime()}
                     >
                       <Completionist />
                     </Countdown>
-                  </p>
+                  </div>
                   <Image className="relative -top-6" src={timer} alt="timer" />
                 </div>
               </div>
@@ -117,7 +117,7 @@ const Pricing = () => {
               </div>
             </div>
           </div>
-          <div className="w-[350px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
+          <div className="w-[343px] lg:w-[400px] h-fit flex flex-col justify-between bg-[#EDEDED] py-8 my-4 lg:my-0 rounded-3xl shadow-[0px_4px_10px_rgba(0,0,0,0.25)]">
             <div className="text-center">
               <h2 className="text-primary text-[#DFAF24] text-2xl font-semibold tracking-[0.8px] pb-6">
                 Premium ta’rifi
