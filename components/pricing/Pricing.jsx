@@ -19,7 +19,7 @@ const Pricing = () => {
       );
     }
   };
-  const Completionist = () => <span>Missed</span>;
+  const Completionist = () => <span>Tugadi</span>;
   return (
     <div className="lg:mt-16 mt-6">
       <div className="container max-w-[375px] lg:max-w-[1280px] mx-auto">
@@ -49,11 +49,6 @@ const Pricing = () => {
                 <div className="">
                   <p className="py-2 pl-[10px] font-normal text-xl">
                     6 oy ingliz va xitoy tilini o‘rganish (offline+online)
-                  </p>
-                </div>
-                <div className="items-center">
-                  <p className="py-2 pl-[10px] font-normal text-xl">
-                    Talabalik davrida ish bilan ta’minlash
                   </p>
                 </div>
               </div>
@@ -98,11 +93,6 @@ const Pricing = () => {
                   <div className="">
                     <p className="py-2 pl-[10px] font-normal text-xl">
                       6 oy ingliz va xitoy tilini o‘rganish (offline+online)
-                    </p>
-                  </div>
-                  <div className="items-center">
-                    <p className="py-2 pl-[10px] font-normal text-xl">
-                      Talabalik davrida ish bilan ta’minlash
                     </p>
                   </div>
                   <div className="items-center">
@@ -155,11 +145,6 @@ const Pricing = () => {
                 <div className="">
                   <p className="py-2 pl-[10px] font-normal text-xl">
                     6 oy ingliz va xitoy tilini o‘rganish (offline+online)
-                  </p>
-                </div>
-                <div className="items-center">
-                  <p className="py-2 pl-[10px] font-normal text-xl">
-                    Talabalik davrida ish bilan ta’minlash
                   </p>
                 </div>
                 <div className="items-center">
