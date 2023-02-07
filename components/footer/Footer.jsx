@@ -1,128 +1,406 @@
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
 import React from "react";
 import logotip from "/public/logotip.svg";
+import Slider from "react-slick";
+import * as Yup from "yup";
+import { FormikConsumer, useFormik } from "formik";
 
-const Footer = () => {
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
   return (
-    <footer className="bg-footerMobiBack lg:bg-footerBack bg-cover bg-no-repeat h-[210px] mt-14">
-      <div className="container mx-4 lg:mx-auto max-w-[375px] lg:max-w-[1280px]">
-        <div className="flex justify-between ">
-          <div className="flex mt-7">
-            <Image
-              className="w-[64px] h-[56px] lg:w-auto lg:h-auto"
-              src={logotip}
-              alt="logo"
-            />
-            <div className="lg:ml-5 ml-2">
-              <h2 className="font-normal text-white font-serif text-2xl lg:text-5xl text-orange">
-                LACHIN
-              </h2>
-              <h4 className="font-normal text-white font-sans text-sm lg:text-xl text-orange">
-                Consulting
-              </h4>
+    <div
+      className={
+        className +
+        ` z-50 absolute top-[397px] -left-[403px] px-8 w-[89px] h-[89px] bg-right hover:bg-right hover:bg-no-repeat hover:bg-center bg-no-repeat bg-center bg-white  hover:bg-white border-2 border-red border-solid rounded-full`
+      }
+      // style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={
+        className +
+        ` z-50 absolute top-[352px] -left-[503px] px-8 w-[89px] h-[89px] rotate-180 bg-right hover:bg-right hover:bg-no-repeat hover:bg-center bg-no-repeat bg-center bg-white  hover:bg-white border-2 border-red border-solid rounded-full`
+      }
+      // style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SampleNextArrowTel(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={
+        className +
+        ` absolute -top-[40px] left-[84px] px-8 w-[64px] h-[64px] bg-right hover:bg-right hover:bg-no-repeat hover:bg-center bg-no-repeat bg-center bg-white  hover:bg-white border-2 border-red border-solid rounded-full`
+      }
+      // style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrowTel(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={
+        className +
+        ` absolute -top-[72px] left-[4px] px-8 rotate-180 w-[64px] h-[64px] bg-right hover:bg-right hover:bg-no-repeat hover:bg-center bg-no-repeat bg-center bg-white  hover:bg-white border-2 border-red border-solid rounded-full`
+      }
+      // style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+const Footer = () => {
+  const phoneRegExp = /^[+]{0,1}[0-9]{9,12}$/;
+  const initialValues = {
+    first_name: "",
+    number: "",
+    text_area: "",
+  };
+
+  const validationSchema = Yup.object({
+    first_name: Yup.string()
+      .required("Username is required, at least 3 characters")
+      .min(3, "Minimal 3 characters")
+      .max(20, "Maximum 20 characters"),
+
+    number: Yup.string("Must be only number")
+      .matches(phoneRegExp, {
+        message: "Phone number is not valid.",
+        excludeEmptyString: true,
+      })
+      .required("Required phone number"),
+  });
+
+  const onSubmit = (values, { resetForm }) => {
+    // toast.success("Successfully sent!");
+
+    axios
+      .post(
+        `${process.env.NEXT_PUBLIC_API_URL} Full name:${values?.first_name} %0APhone number: ${values?.number} %0AMessage: ${values?.text_area}`
+      )
+      .then(function (response) {
+        alert("Surovingiz yuborildi");
+        // values.first_name = "";
+        // values.number = "";
+        // values.text_area = "";
+      })
+      .catch(function (error) {
+        console.log("Internal error");
+      });
+    values.name = "";
+
+    resetForm({ values: "" });
+  };
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validationSchema,
+  });
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
+  const settingss = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrowTel />,
+    prevArrow: <SamplePrevArrowTel />,
+  };
+  return (
+    <footer className="relative bg-foote bg-cover bg-no-repeat mt-[175px] lg:mt-[115px]">
+      <div className="container relative mx-auto px-auto pb-10 lg:mx-auto max-w-[375px] lg:max-w-[1480px]">
+        <div className="absolute -top-[151px] left-7 w-[492px] h-[1400px] bg-[#B9B5C0] opacity-20 blur-[150px] -rotate-[27deg]"></div>
+        <div className="absolute top-[348px] h-[275px] w-[1460px] bg-discount bg-cover bg-no-repeat"></div>
+        <div
+          id="izoh"
+          className="flex flex-col w-[343px] lg:flex-row mx-auto lg:w-[1108px] h-[605px] font-poppins"
+        >
+          <div className=" relative">
+            <p className="text-[17px] leading-[32px] text-[#161616] w-[265px] lg:text-[28px] lg:w-[410px] mt-[58px] lg:leading-[42px]">
+              Xitoy ta’limi haqida xalqaro talabalarning fikri
+            </p>
+            <div className="z-10 font-bold text-[24px] lg:text-[56px] mt-[25px] leading-[34px] lg:leading-[72px]">
+              <p className="bg-white rounded-[5px] lg:w-[547px] w-[277px]">
+                Xitoyda yashab{" "}
+              </p>
+              <p className="z-10 bg-white rounded-[5px] lg:w-[458px] w-[199px] mt-1">
+                qolaman deb
+              </p>
+              <p className="z-10 bg-white rounded-[5px] lg:w-[554px] w-[220px] mt-1">
+                o’ylamagandim
+              </p>
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row mt-4 lg:mt-8 ">
-            <div className="lg:my-0 my-4">
-              <div className="flex">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.275 10.4875C7.075 14.025 9.975 16.925 13.5125 18.725L16.2625 15.975C16.6125 15.625 17.1 15.525 17.5375 15.6625C18.9375 16.125 20.4375 16.375 22 16.375C22.3315 16.375 22.6495 16.5067 22.8839 16.7411C23.1183 16.9755 23.25 17.2935 23.25 17.625V22C23.25 22.3315 23.1183 22.6495 22.8839 22.8839C22.6495 23.1183 22.3315 23.25 22 23.25C16.3641 23.25 10.9591 21.0112 6.97398 17.026C2.98883 13.0409 0.75 7.63585 0.75 2C0.75 1.66848 0.881696 1.35054 1.11612 1.11612C1.35054 0.881696 1.66848 0.75 2 0.75H6.375C6.70652 0.75 7.02446 0.881696 7.25888 1.11612C7.4933 1.35054 7.625 1.66848 7.625 2C7.625 3.5625 7.875 5.0625 8.3375 6.4625C8.475 6.9 8.375 7.3875 8.025 7.7375L5.275 10.4875Z"
-                    fill="#FCE663"
-                  />
-                </svg>
-                <p className="-mt-2 font-sans font-semibold lg:text-2xl text-[#FCE663]">
-                  +998917744549
-                </p>
+          <div className="lg:w-[639px] w-[343px] mx-auto h-[260px] mt-20 lg:mt-0 lg:-ml-16 lg:h-[565px] lg:p-6 lg:bg-black bg-white rounded-[32px] lg:rounded-[70px] z-0">
+            <Slider className="relative lg:block hidden" {...settings}>
+              <div>
+                <iframe
+                  className="rounded-[50px] "
+                  width="585"
+                  height="515"
+                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              <div className="flex items-center">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.275 10.4875C7.075 14.025 9.975 16.925 13.5125 18.725L16.2625 15.975C16.6125 15.625 17.1 15.525 17.5375 15.6625C18.9375 16.125 20.4375 16.375 22 16.375C22.3315 16.375 22.6495 16.5067 22.8839 16.7411C23.1183 16.9755 23.25 17.2935 23.25 17.625V22C23.25 22.3315 23.1183 22.6495 22.8839 22.8839C22.6495 23.1183 22.3315 23.25 22 23.25C16.3641 23.25 10.9591 21.0112 6.97398 17.026C2.98883 13.0409 0.75 7.63585 0.75 2C0.75 1.66848 0.881696 1.35054 1.11612 1.11612C1.35054 0.881696 1.66848 0.75 2 0.75H6.375C6.70652 0.75 7.02446 0.881696 7.25888 1.11612C7.4933 1.35054 7.625 1.66848 7.625 2C7.625 3.5625 7.875 5.0625 8.3375 6.4625C8.475 6.9 8.375 7.3875 8.025 7.7375L5.275 10.4875Z"
-                    fill="#FCE663"
-                  />
-                </svg>
-                <p className="font-sans font-semibold lg:text-2xl text-[#FCE663]">
-                  +998917744548
-                </p>
+              <div>
+                <iframe
+                  className="rounded-[50px]"
+                  width="585"
+                  height="515"
+                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-            </div>
-
-            <div className="lg:ml-8 flex justify-around lg:my-0 my-4">
-              <a
-                target="_blank"
-                href="https://t.me/lachinconsulting"
-                className="mx-4"
-              >
-                <svg
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M15 0C6.72 0 0 6.72 0 15C0 23.28 6.72 30 15 30C23.28 30 30 23.28 30 15C30 6.72 23.28 0 15 0ZM21.96 10.2C21.735 12.57 20.76 18.33 20.265 20.985C20.055 22.11 19.635 22.485 19.245 22.53C18.375 22.605 17.715 21.96 16.875 21.405C15.555 20.535 14.805 19.995 13.53 19.155C12.045 18.18 13.005 17.64 13.86 16.77C14.085 16.545 17.925 13.05 18 12.735C18.0104 12.6873 18.009 12.6378 17.996 12.5907C17.9829 12.5437 17.9585 12.5005 17.925 12.465C17.835 12.39 17.715 12.42 17.61 12.435C17.475 12.465 15.375 13.86 11.28 16.62C10.68 17.025 10.14 17.235 9.66 17.22C9.12 17.205 8.1 16.92 7.335 16.665C6.39 16.365 5.655 16.2 5.715 15.675C5.745 15.405 6.12 15.135 6.825 14.85C11.205 12.945 14.115 11.685 15.57 11.085C19.74 9.345 20.595 9.045 21.165 9.045C21.285 9.045 21.57 9.075 21.75 9.225C21.9 9.345 21.945 9.51 21.96 9.63C21.945 9.72 21.975 9.99 21.96 10.2Z"
-                    fill="#FCE663"
-                  />
-                </svg>
-              </a>
-              <a
-                target="_blank"
-                href="https://instagram.com/lachinconsulting?igshid=MDM4ZDc5MmU="
-                className="mx-4"
-              >
-                <svg
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19.8 15C19.8 15.9494 19.5185 16.8774 18.9911 17.6667C18.4636 18.4561 17.714 19.0713 16.8369 19.4346C15.9598 19.7979 14.9947 19.893 14.0636 19.7078C13.1325 19.5226 12.2772 19.0654 11.6059 18.3941C10.9346 17.7228 10.4774 16.8675 10.2922 15.9364C10.107 15.0053 10.2021 14.0402 10.5654 13.1631C10.9287 12.286 11.5439 11.5364 12.3333 11.0089C13.1226 10.4815 14.0507 10.2 15 10.2C16.2718 10.204 17.4904 10.7109 18.3897 11.6103C19.2891 12.5096 19.796 13.7282 19.8 15ZM30 8.4V21.6C30 23.8278 29.115 25.9644 27.5397 27.5397C25.9644 29.115 23.8278 30 21.6 30H8.4C6.17218 30 4.03561 29.115 2.4603 27.5397C0.884997 25.9644 0 23.8278 0 21.6V8.4C0 6.17218 0.884997 4.03561 2.4603 2.4603C4.03561 0.884997 6.17218 0 8.4 0H21.6C23.8278 0 25.9644 0.884997 27.5397 2.4603C29.115 4.03561 30 6.17218 30 8.4ZM22.2 15C22.2 13.576 21.7777 12.1839 20.9866 10.9999C20.1954 9.81586 19.0709 8.89302 17.7553 8.34807C16.4397 7.80312 14.992 7.66053 13.5954 7.93835C12.1987 8.21616 10.9158 8.90189 9.90883 9.90883C8.90189 10.9158 8.21616 12.1987 7.93835 13.5954C7.66053 14.992 7.80312 16.4397 8.34807 17.7553C8.89302 19.0709 9.81586 20.1954 10.9999 20.9866C12.1839 21.7777 13.576 22.2 15 22.2C16.9096 22.2 18.7409 21.4414 20.0912 20.0912C21.4414 18.7409 22.2 16.9096 22.2 15ZM24.6 7.2C24.6 6.84399 24.4944 6.49598 24.2966 6.19997C24.0989 5.90397 23.8177 5.67325 23.4888 5.53702C23.1599 5.40078 22.798 5.36513 22.4488 5.43459C22.0997 5.50404 21.7789 5.67547 21.5272 5.92721C21.2755 6.17894 21.104 6.49967 21.0346 6.84884C20.9651 7.198 21.0008 7.55992 21.137 7.88883C21.2733 8.21774 21.504 8.49886 21.8 8.69665C22.096 8.89443 22.444 9 22.8 9C23.2774 9 23.7352 8.81036 24.0728 8.47279C24.4104 8.13523 24.6 7.67739 24.6 7.2Z"
-                    fill="#FCE663"
-                  />
-                </svg>
-              </a>
-
-              <a
-                target="_blank"
-                href="https://www.facebook.com/lachinconsulting?mibextid=ZbWKwL"
-                className="mx-4"
-              >
-                <svg
-                  width="30"
-                  height="27"
-                  viewBox="0 0 30 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30 13.5338C30 6.06316 23.28 0 15 0C6.72 0 0 6.06316 0 13.5338C0 20.0842 5.16 25.5383 12 26.797V17.594H9V13.5338H12V10.1504C12 7.53835 14.355 5.41353 17.25 5.41353H21V9.47368H18C17.175 9.47368 16.5 10.0827 16.5 10.8271V13.5338H21V17.594H16.5V27C24.075 26.3233 30 20.5579 30 13.5338Z"
-                    fill="#FCE663"
-                  />
-                </svg>
-              </a>
-            </div>
+              <div>
+                <iframe
+                  className="rounded-[50px]"
+                  width="585"
+                  height="515"
+                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="">
+                <iframe
+                  className="rounded-[50px]"
+                  width="327"
+                  height="240"
+                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Slider>
+            <Slider className="relative lg:hidden block" {...settingss}>
+              <div className="">
+                <iframe
+                  className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
+                  width="327"
+                  height="240"
+                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="">
+                <iframe
+                  className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
+                  width="327"
+                  height="240"
+                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Slider>
           </div>
         </div>
-        <div className="text-center  mt-2 p-2 border-t-2 border-white border-solid text-white text-xl font-normal divide-y divide-red">
-          <p>2022 Lachin Consulting</p>
+
+        <div className="flex relative my-10 mb-20 mx-auto lg:max-w-[1197px] h-[550px] font-poppins">
+          <div className="absolute -top-[478px] -z-50 -left-[58px] w-[493px] h-[973px] bg-[#E5BC18] opacity-20 blur-[150px] -rotate-[27deg]"></div>
+          <div className="absolute -top-[265px] -z-50 left-[361px] w-[493px] h-[973px] bg-[#E5BC18] opacity-20 blur-[150px] -rotate-[27deg]"></div>
+          <div className="absolute -top-[216px] -z-50 left-[20px] w-[493px] max-h-[1800px] bg-[#B9B5C0] opacity-20 blur-[150px] -rotate-[27deg]"></div>
+
+          <div
+            id="contacts"
+            className="lg:w-[767px] w-[343px] ml-4 h-[510px] z-10 bg-white rounded-[50px] font-poppins"
+          >
+            <form
+              onSubmit={(e) => {
+                formik.handleSubmit(e);
+                // formik.values = initialValues;
+              }}
+              className="mt-[25px] lg:mt-[53px] lg:ml-[70px]"
+            >
+              <h1 className="font-bold mb-6 text-[24px] leading-[36px] lg:text-[40px] lg:leading-[60px] text-center">
+                Biz bilan bog’lanish
+              </h1>
+
+              <div className="flex lg:flex-row flex-col items-center">
+                <div></div>
+                <div className="mb-5 lg:mb-0">
+                  <h3 className="text-[12px] leading-4">Ismi sharifingiz:</h3>
+                  <input
+                    name="first_name"
+                    id="first_name"
+                    minLength="3"
+                    maxLength="25"
+                    className={
+                      formik.touched.first_name && formik.errors.first_name
+                        ? "  focus:outline-none py-2 mt-2 opacity-70 lg:w-[288px] text-[20px] leading-[30px] font-bold border-b border-solid  border-red-600"
+                        : "  focus:outline-none py-2 mt-2 opacity-70 lg:w-[288px] text-[20px] leading-[30px] font-bold border-b border-solid border-black"
+                    }
+                    // className=""
+                    type="text"
+                    placeholder="Ismi sharifingiz"
+                    {...formik.getFieldProps("first_name")}
+                  />
+                  {formik.touched.first_name && formik.errors.first_name ? (
+                    <span className="text-red-600 text-xs absolute -bottom-1 sm:-bottom-5 left-2">
+                      {formik.errors.first_name}
+                    </span>
+                  ) : null}
+                </div>
+                <div className="lg:ml-[35px] mb-5 lg:mb-0">
+                  <h3 className="text-[12px] leading-4">Telefon raqamingiz:</h3>
+                  <input
+                    name="number"
+                    id="number"
+                    className={
+                      formik.touched.number && formik.errors.number
+                        ? " focus:outline-none py-2 mt-2 opacity-70 text-[20px] leading-[30px] font-bold w-[288px] border-b border-solid border-red-600"
+                        : " focus:outline-none py-2 mt-2 opacity-70 text-[20px] leading-[30px] font-bold w-[288px] border-b border-solid border-black"
+                    }
+                    // className=""
+                    type="text"
+                    placeholder="+998"
+                    {...formik.getFieldProps("number")}
+                    // value=""
+                  />
+                </div>
+                <div className="lg:hidden">
+                  <h3 className="text-[12px] leading-4">
+                    Qo’shimcha fikr - mulohazalar
+                  </h3>
+                  <textarea
+                    name="text_area"
+                    id="text_area"
+                    maxLength={200}
+                    className="lg:max-h-32 max-h-20 min-h-[40px] focus:outline-none py-2 mt-2 opacity-70 w-[288px] text-[20px] leading-[30px] font-bold lg:w-[611px] border-b border-solid border-black"
+                    type="text"
+                    placeholder="Matn"
+                    {...formik.getFieldProps("text_area")}
+                    // value=""
+                  />
+                </div>
+              </div>
+              <div className="mt-7 lg:block hidden">
+                <h3 className="text-[12px] leading-4">
+                  Qo’shimcha fikr - mulohazalar
+                </h3>
+                <textarea
+                  name="text_area"
+                  id="text_area"
+                  maxLength={200}
+                  className="max-h-32 min-h-[40px] focus:outline-none py-2 mt-2 opacity-70 text-[20px] leading-[30px] font-bold w-[611px] border-b border-solid border-black"
+                  type="text"
+                  placeholder="Matn"
+                  {...formik.getFieldProps("text_area")}
+                  // value=""
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-[236px] mt-5 lg:mt-10 h-[76px] py-[23px] px-[72px] bg-[#121212] rounded-[20px] text-white"
+              >
+                Yuborish
+              </button>
+            </form>
+          </div>
+          <div className="lg:w-[550px] lg:h-[550px] z-10 absolute lg:top-0 top-[500px] right-0">
+            <img src="/mail.png" alt="mail" />
+          </div>
+          <div className="absolute lg:-left-[175px] -bottom-[343px] h-[421px] -z-10 w-[1365px] bg-footer bg-contain bg-no-repeat"></div>
+        </div>
+
+        <div className="mx-auto lg:mt-0 mt-80 lg:w-[1140px] lg:h-[232px] lg:rounded-[24px] bg-white">
+          <div className="flex lg:flex-row flex-col justify-between pt-4 lg:pt-[50px] lg:mx-[48px]">
+            <div className="flex justify-between items-center px-4">
+              <div className="flex">
+                <Image
+                  className="w-[40px] h-[36px] lg:w-[60px] lg:h-[54px]"
+                  src={logotip}
+                  alt="logo"
+                />
+                <div className="lg:ml-3 ml-2">
+                  <h2 className="font-normal text-black font-serif text-xl lg:text-2xl tracking-wider text-orange">
+                    LACHIN
+                  </h2>
+                  <h4 className="font-normal text-black font-sans text-sm lg:text-base text-orange">
+                    Consulting
+                  </h4>
+                </div>
+              </div>
+              <span className="lg:hidden block text-black py-2 px-2 rounded-full border-2 border-solid border-[#D19506] font-sans text-sm lg:text-xl font-semibold">
+                +91 774-45-49
+              </span>
+            </div>
+            <div className="flex lg:mt-0 justify-evenly mt-4 items-center font-poppins">
+              <a className="text-[15px] leading-[22px]" href="">
+                Instagram
+              </a>
+              <a className="ml-[30px] text-[15px] leading-[22px]" href="">
+                Facebook
+              </a>
+              <a className="ml-[30px] text-[15px] leading-[22px]" href="">
+                Telegram
+              </a>
+              <span className="lg:block hidden text-black ml-[42px] py-3 px-5 rounded-full border-2 border-solid border-[#D19506] font-sans text-xl lg:text-xl font-semibold">
+                +91 774-45-49
+              </span>
+            </div>
+          </div>
+          <div className="border-b border-solid border-black mt-[29px]"></div>
+          <div className="flex mt-4 lg:mt-[26px] px-3 lg:px-[53px] items-center justify-between font-poppins">
+            <div>
+              <a className="text-[15px] leading-[22px]" href="">
+                &copy; Copyright
+              </a>
+              <a
+                className="lg:ml-[30px] ml-5 text-[15px] leading-[22px]"
+                href=""
+              >
+                Privacy & Policy
+              </a>
+              <a
+                className="lg:ml-[30px] ml-5 text-[15px] leading-[22px]"
+                href=""
+              >
+                Terms of Use
+              </a>
+            </div>
+            <span className="text-[15px] hidden lg:block leading-[22px]">
+              Designed by: <b>Gavhar</b>
+            </span>
+          </div>
         </div>
       </div>
     </footer>

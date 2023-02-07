@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"); */
 
 :root {
   --max-width: 1100px;
@@ -123,4 +126,95 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* ---------------- Navbar and burger menu ------------------ */
+nav {
+  position: relative;
+  width: 24px;
+  height: 5em;
+  /* background-color: rgb(37, 39, 53); */
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+  scale: 0.5;
+  z-index: 10 !important;
+}
+
+.burger-menu {
+  /* height: 100%; */
+  /* width: 4em; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 4em;
+  height: 0.5em;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 163px;
+  height: 212px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 96px;
+  right: 16px;
+  z-index: 1000;
+  border-radius: 24px;
+  padding: 14px 28px;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  /* Full width (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked {
+  background-color: white;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }
