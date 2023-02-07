@@ -329,7 +329,7 @@ const Footer = () => {
               </div>
               <button
                 type="submit"
-                className="w-[236px] mt-5 lg:mt-10 h-[76px] py-[23px] px-[72px] bg-[#121212] rounded-[20px] text-white"
+                className="w-[236px] ml-14 lg:ml-0 mt-5 lg:mt-10 h-[76px] py-[23px] px-[72px] bg-[#121212] rounded-[20px] text-white"
               >
                 Yuborish
               </button>
