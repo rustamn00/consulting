@@ -265,8 +265,8 @@ const Footer = () => {
                     maxLength="25"
                     className={
                       formik.touched.first_name && formik.errors.first_name
-                        ? "  focus:outline-none py-2 mt-2 opacity-70 lg:w-[288px] text-[20px] leading-[30px] font-bold border-b border-solid  border-red-600"
-                        : "  focus:outline-none py-2 mt-2 opacity-70 lg:w-[288px] text-[20px] leading-[30px] font-bold border-b border-solid border-black"
+                        ? "  focus:outline-none py-2 mt-2 opacity-70 w-[288px] text-[20px] leading-[30px] font-bold border-b border-solid  border-red-600"
+                        : "  focus:outline-none py-2 mt-2 opacity-70 w-[288px] text-[20px] leading-[30px] font-bold border-b border-solid border-black"
                     }
                     // className=""
                     type="text"
