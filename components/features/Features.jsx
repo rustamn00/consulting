@@ -12,7 +12,7 @@ const Features = () => {
           <h2 className="text-[24px] lg:text-[32px] text-center font-poppins px-4 lg:px-0 leading-[34px] lg:leading-[49px] text-black font-bold lg:font-semibold">
             Avval shu videoni ko’ring
           </h2>
-          <p className="mx-auto font-poppins text-[17px] w-[213px] leading-8 font-normal text-[#161616]">
+          <p className="mx-auto font-poppins text-[17px] w-[213px] lg:w-auto leading-8 font-normal text-[#161616]">
             Biz haqimizda batafsil shu yerdan bilasiz
           </p>
         </div>
