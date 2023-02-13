@@ -18,7 +18,10 @@ const Features = () => {
         </div>
         {/* Video */}
         <div className="justify-center flex mx-4 lg:mx-0 lg:px-0 rounded-sm">
-          <iframe
+          <div className="hidden lg:block w-[1140px] h-[574px] bg-black"></div>
+          <div className="lg:hidden block w-[343px] h-[240px] bg-black"></div>
+
+          {/* <iframe
             className="hidden mt-4 lg:block"
             width="1140"
             height="574"
@@ -27,8 +30,8 @@ const Features = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
-          <iframe
+          ></iframe> */}
+          {/* <iframe
             className="block mt-4 lg:hidden rounded-[32px]"
             width="343"
             height="240"
@@ -37,7 +40,7 @@ const Features = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
         </div>
         <div className="">
           <div className="relative w-[307px] lg:-top-[120px] -top-[56px] left-[28px] lg:left-[175px] text-[#161616] font-poppins font-bold text-[24px] leading-[34px] lg:text-[54px] lg:leading-[70px]">

@@ -156,8 +156,8 @@ const Footer = () => {
 
           <div className="lg:w-[639px] w-[343px] mx-auto h-[260px] mt-20 lg:mt-0 lg:-ml-16 lg:h-[565px] lg:p-6 lg:bg-black bg-white rounded-[32px] lg:rounded-[70px] z-0">
             <Slider className="relative lg:block hidden" {...settings}>
-              <div>
-                <iframe
+              <div className="w-[585px] h-[515px] bg-white">
+                {/* <iframe
                   className="rounded-[50px] "
                   width="585"
                   height="515"
@@ -166,10 +166,10 @@ const Footer = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe> */}
               </div>
-              <div>
-                <iframe
+              <div className="w-[585px] h-[515px] bg-black">
+                {/* <iframe
                   className="rounded-[50px]"
                   width="585"
                   height="515"
@@ -178,10 +178,10 @@ const Footer = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe> */}
               </div>
-              <div>
-                <iframe
+              <div className="w-[585px] h-[515px] bg-white">
+                {/* <iframe
                   className="rounded-[50px]"
                   width="585"
                   height="515"
@@ -190,10 +190,10 @@ const Footer = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe> */}
               </div>
-              <div className="">
-                <iframe
+              <div className="w-[585px] h-[515px] bg-black">
+                {/* <iframe
                   className="rounded-[50px]"
                   width="327"
                   height="240"
@@ -202,12 +202,12 @@ const Footer = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe> */}
               </div>
             </Slider>
             <Slider className="relative lg:hidden block" {...settingss}>
-              <div className="">
-                <iframe
+              <div className="w-[327px] h-[240px] bg-white">
+                {/* <iframe
                   className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
                   width="327"
                   height="240"
@@ -216,10 +216,10 @@ const Footer = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe> */}
               </div>
-              <div className="">
-                <iframe
+              <div className="w-[327px] h-[240px] bg-black">
+                {/* <iframe
                   className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
                   width="327"
                   height="240"
@@ -228,7 +228,7 @@ const Footer = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                ></iframe> */}
               </div>
             </Slider>
           </div>
