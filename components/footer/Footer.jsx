@@ -156,79 +156,79 @@ const Footer = () => {
 
           <div className="lg:w-[639px] w-[343px] mx-auto h-[260px] mt-20 lg:mt-0 lg:-ml-16 lg:h-[565px] lg:p-6 lg:bg-black bg-white rounded-[32px] lg:rounded-[70px] z-0">
             <Slider className="relative lg:block hidden" {...settings}>
-              <div className="w-[585px] h-[515px] bg-white">
-                {/* <iframe
+              <div className="w-[585px] h-[515px]">
+                <iframe
                   className="rounded-[50px] "
                   width="585"
                   height="515"
-                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  src="https://www.youtube.com/embed/muyA5bc8Djw"
                   title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                ></iframe> */}
+                ></iframe>
               </div>
-              <div className="w-[585px] h-[515px] bg-black">
-                {/* <iframe
-                  className="rounded-[50px]"
+              <div className="w-[585px] h-[515px]">
+                <iframe
+                  className="rounded-[50px] "
                   width="585"
                   height="515"
-                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  src="https://www.youtube.com/embed/oZ5pPHlfnNg"
                   title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                ></iframe> */}
+                ></iframe>
               </div>
-              <div className="w-[585px] h-[515px] bg-white">
-                {/* <iframe
-                  className="rounded-[50px]"
+              <div className="w-[585px] h-[515px]">
+                <iframe
+                  className="rounded-[50px] "
                   width="585"
                   height="515"
-                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  src="https://www.youtube.com/embed/h9dh6V9v_Sk"
                   title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                ></iframe> */}
-              </div>
-              <div className="w-[585px] h-[515px] bg-black">
-                {/* <iframe
-                  className="rounded-[50px]"
-                  width="327"
-                  height="240"
-                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe> */}
+                ></iframe>
               </div>
             </Slider>
             <Slider className="relative lg:hidden block" {...settingss}>
-              <div className="w-[327px] h-[240px] bg-white">
-                {/* <iframe
+              <div className="w-[327px] h-[240px]">
+                <iframe
                   className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
                   width="327"
                   height="240"
-                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  src="https://www.youtube.com/embed/muyA5bc8Djw"
                   title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                ></iframe> */}
+                ></iframe>
               </div>
-              <div className="w-[327px] h-[240px] bg-black">
-                {/* <iframe
+              <div className="w-[327px] h-[240px]">
+                <iframe
                   className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
                   width="327"
                   height="240"
-                  src="https://www.youtube.com/embed/6o4xaxSrrLY"
+                  src="https://www.youtube.com/embed/oZ5pPHlfnNg"
                   title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                ></iframe> */}
+                ></iframe>
+              </div>
+              <div className="w-[327px] h-[240px]">
+                <iframe
+                  className="lg:rounded-[50px] rounded-[32px] mx-auto my-3"
+                  width="327"
+                  height="240"
+                  src="https://www.youtube.com/embed/h9dh6V9v_Sk"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </Slider>
           </div>
@@ -338,7 +338,7 @@ const Footer = () => {
           <div className="lg:w-[550px] lg:h-[550px] z-10 absolute lg:top-0 top-[500px] right-0">
             <img src="/mail.png" alt="mail" />
           </div>
-          <div className="absolute lg:-left-[175px] -bottom-[343px] h-[421px] -z-10 w-[1365px] bg-footer bg-contain bg-no-repeat"></div>
+          <div className="absolute lg:-left-[35px] -bottom-[343px] h-[421px] -z-10 w-[1365px] bg-footer bg-contain bg-no-repeat"></div>
         </div>
 
         <div className="mx-auto lg:mt-0 mt-80 lg:w-[1140px] lg:h-[232px] lg:rounded-[24px] bg-white">
@@ -378,7 +378,7 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="border-b border-solid border-black mt-[29px]"></div>
+          <div className="border-b w-[95%] mx-auto border-solid border-black mt-[29px]"></div>
           <div className="flex mt-4 lg:mt-[26px] px-3 lg:px-[53px] items-center justify-between font-poppins">
             <div>
               <a className="text-[15px] leading-[22px]" href="">
@@ -398,7 +398,7 @@ const Footer = () => {
               </a>
             </div>
             <span className="text-[15px] hidden lg:block leading-[22px]">
-              Designed by: <b>Gavhar</b>
+              Designed by: <b>Lachin Consulting</b>
             </span>
           </div>
         </div>
