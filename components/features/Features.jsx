@@ -66,7 +66,7 @@ const Features = () => {
           className="relative pt-20 h-[553px] flex max-w-[375px] lg:max-w-[1440px] lg:mt-[30px] xl:mt-[100px] 2xl:mt-[150px] lg:justify-end"
         >
           <div className="absolute lg:hidden mt-28 w-[375px] h-[553px] bg-discount_ph bg-contain bg-no-repeat"></div>
-          <div className="-mt-10 lg:w-auto lg:mx-0 mx-auto">
+          <div className=" lg:w-auto lg:mx-0 mx-auto">
             <div className="relative mx-auto w-[343px] h-[138px] lg:w-[550px] lg:h-[141px] lg:px-0 lg:py-0 px-4 py-6 bg-white rounded-[30px] lg:rounded-[22px] lg:mr-10 z-10">
               <div className="flex flex-col">
                 <div className="flex lg:ml-6 lg:mt-6 items-center font-poppins">
@@ -74,123 +74,53 @@ const Features = () => {
                     Standart ta’rifi:
                   </p>
                   <p className="bg-black text-[#E5BC18] lg:text-black lg:bg-[#E5BC18] lg:bg-opacity-70 text-[20px] leading-[30px] font-extrabold rounded-[56px] px-6 py-2 ml-2">
-                    3 800 $
+                    900 $
                   </p>
                 </div>
                 <div className="flex flex-nowrap lg:ml-5 mt-2 lg:text-base text-sm">
-                  <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE]">
-                    Bepul o'qish
-                  </p>
-                  <p className="px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] lg:ml-1">
-                    Bepul yotoqxona
-                  </p>
-                  <p className="hidden lg:block text-sm lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] lg:ml-1">
-                    6 oy ingliz va xitoy tilini o'rganish
+                  <p className="lg:px-[10px] py-1 px-1 lg:py-[7px] rounded-xl lg:rounded-full bg-[#EEEEEE]">
+                    Grandsiz kontrakt asosida o'qishga kirishga yordamlashish
                   </p>
                 </div>
-                <p className="block lg:hidden text-sm lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] lg:ml-1">
-                  6 oy ingliz va xitoy tilini o'rganish
-                </p>
               </div>
             </div>
 
-            <div className="relative z-10 mx-auto w-[343px] lg:w-[550px] h-[218px] bg-white lg:bg-opacity-70 lg:px-0 lg:py-0 px-4 py-6 border-[#E5BC18] border-solid lg:border-2 rounded-[22px] lg:mr-10 mt-[10px]">
+            <div className="relative z-10 mx-auto w-[343px] lg:w-[550px] h-[138px] bg-white lg:bg-opacity-70 lg:px-0 lg:py-0 px-4 py-6 border-[#E5BC18] border-solid lg:border-2 rounded-[22px] lg:mr-10 mt-[10px]">
               <div className="flex flex-col">
                 <div className="flex lg:ml-6 lg:mt-5 items-center font-poppins">
                   <p className="text-[20px] lg:text-[24px] leading-9 font-bold text-black">
                     Optimal ta’rifi:
                   </p>
-                  <p className="lg:bg-white bg-[#F78E5F] text-[18px] lg:text-[20px] leading-[30px] font-extrabold rounded-[56px] lg:px-6 px-2 py-2 lg:py-2 ml-2">
-                    4 800 $
-                  </p>
-                  <p className="bg-[#E53D18] font-medium font-mono p-2 text-white rounded-[16px] text-[25px] leading-[30px] ml-2">
-                    hot
+                  <p className="lg:bg-white bg-[#F78E5F] text-[18px] lg:text-[20px] leading-[30px] font-extrabold rounded-[56px] lg:px-3 px-2 py-2 lg:py-2 ml-2">
+                    1 600 $
                   </p>
                 </div>
                 <div className="flex lg:ml-5 mt-2">
                   <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:border border-solid border-black">
-                    Bepul o'qish
-                  </p>
-                  <p className="lg:px-[10px] px-4 lg:py-[7px] lg:rounded-full lg:border border-solid border-black ml-1">
-                    Bepul yotoqxona
-                  </p>
-                  <p className="lg:hidden block lg:px-[10px] lg:py-[7px] lg:rounded-full lg:border border-solid border-black">
-                    Sug’urta
-                  </p>
-                  <p className="hidden lg:block lg:px-[10px] lg:py-[7px] lg:rounded-full lg:border border-solid border-black ml-1">
-                    6 oy ingliz va xitoy tilini o'rganish
-                  </p>
-                </div>
-                <p className="lg:hidden text-sm lg:px-[10px] py-[4px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] lg:ml-1">
-                  6 oy ingliz va xitoy tilini o'rganish
-                </p>
-                <div className="flex lg:ml-5 lg:mt-2">
-                  <p className="lg:px-[10px] py-1 text-sm lg:py-[7px] rounded-full lg:border border-solid border-black">
-                    Savdo agentlik kursi (talabalikni o’zida tadbirkorlikni
-                    boshlashni istaganlar uchun)
-                  </p>
-                </div>
-                <div className="flex lg:ml-5 lg:mt-2">
-                  <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:border border-solid border-black">
-                    Sug’urta
-                  </p>
-                  <p className="px-[10px] lg:py-[7px] lg:rounded-full lg:border border-solid border-black ml-1">
-                    Tibbiy tekshiruv
-                  </p>
-                  <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:border border-solid border-black ml-1">
-                    Visa xarajatlari
+                    To'liq bo'lmagan grand asosida o'qisha kirishiga
+                    yordamlashish
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="relative w-[343px] mx-auto lg:w-[550px] h-[252px] bg-white rounded-[22px] lg:mr-10 mt-[10px]">
+            <div className="relative w-[343px] mx-auto lg:w-[550px] h-[138px] bg-stone-200 rounded-[22px] lg:mr-10 mt-[10px]">
               <div className="flex flex-col z-10">
                 <div className="flex ml-6 mt-6 items-center font-poppins">
                   <p className="text-[20px] lg:text-[24px] leading-9 font-bold text-black">
                     Premium ta’rifi:
                   </p>
-                  <p className="bg-black text-[#E5BC18] lg:text-black lg:bg-[#E5BC18] text-[20px] leading-[30px] font-extrabold rounded-[56px] px-6 py-2 ml-2">
-                    8 800 $
+                  <p className="bg-black text-[#E5BC18] lg:text-black lg:bg-[#E5BC18] text-[16px] leading-[30px] font-extrabold rounded-[56px] px-2 lg:px-4 py-2 ml-2">
+                    2 200 $
+                  </p>
+                  <p className="bg-[#E53D18] font-medium font-mono p-2 text-white rounded-[16px] text-[25px] leading-[30px] ml-2">
+                    hot
                   </p>
                 </div>
                 <div className="flex text-sm ml-5 mt-2">
                   <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE]">
-                    Bepul o'qish
-                  </p>
-                  <p className="lg:px-[10px] px-4 lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] ml-1">
-                    Bepul yotoqxona
-                  </p>
-                  <p className="lg:hidden block lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE]">
-                    Sug’urta
-                  </p>
-                  <p className="hidden lg:block lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] ml-1">
-                    6 oy ingliz va xitoy tilini o'rganish
-                  </p>
-                </div>
-                <p className="lg:hidden ml-5 text-sm lg:px-[10px] py-[4px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE] lg:ml-1">
-                  6 oy ingliz va xitoy tilini o'rganish
-                </p>
-                <div className="flex ml-5 lg:mt-2">
-                  <p className="lg:px-[10px] py-1 text-sm lg:py-[7px] rounded-full lg:bg-[#EEEEEE]">
-                    Savdo agentlik kursi (talabalikni o’zida tadbirkorlikni
-                    boshlashni istaganlar uchun)
-                  </p>
-                </div>
-                <div className="flex text-sm ml-5 lg:mt-2">
-                  <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE]">
-                    Sug’urta
-                  </p>
-                  <p className="px-[10px] lg:py-[7px] lg:rounded-full ml-1 lg:bg-[#EEEEEE]">
-                    Tibbiy tekshiruv
-                  </p>
-                  <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full ml-1 lg:bg-[#EEEEEE]">
-                    Visa xarajatlari
-                  </p>
-                </div>
-                <div className="flex ml-5 mt-2 text-sm">
-                  <p className="lg:px-[10px] lg:py-[7px] lg:rounded-full lg:bg-[#EEEEEE]">
-                    O’qishni yakunlagandan so’ng ish bilan ta’minlash kafolati
+                    Grand asosida o'qishga kirishga yordamlashish (bepul o'qish,
+                    bepul yotoqxona)
                   </p>
                 </div>
               </div>
@@ -200,7 +130,7 @@ const Features = () => {
         </div>
 
         {/* Pul tejash  */}
-        <div className="lg:max-w-[1140px] max-w-[375px] flex flex-col lg:flex-row font-poppins text-white mt-[215px] mx-auto h-[558px] bg-[#202020] rounded-[44px]">
+        <div className="lg:max-w-[1140px] max-w-[375px] flex flex-col lg:flex-row font-poppins relative text-white z-50 mx-auto h-[558px] bg-[#202020] rounded-[44px]">
           <div className="mt-[40px] lg:pt-[57px] lg:ml-[79px]">
             <h1 className="lg:w-[504px] text-center font-extrabold text-[24px] leading-[34px] lg:px-0 px-9 lg:text-[42px] lg:leading-[57px]">
               Qancha pulni tejab qolasiz?
@@ -292,7 +222,7 @@ const Features = () => {
           </div>
           <div className="mt-[20px] w-[311px] mx-auto lg:mt-[92px] lg:ml-[67px] lg:w-[378px] lg:h-[372px] z-30 rounded-[44px] bg-white">
             <div className="my-[20px] py-4 flex flex-col justify-center font-poppins text-black">
-              <p className="font-bold text-[56px] leading-relaxed text-[#161616] text-center lg:ml-[76px]">
+              <p className="font-bold text-[56px] leading-relaxed text-[#161616] text-center">
                 26 000$
               </p>
               <p className="text-[23px] leading-[34px] text-center">
